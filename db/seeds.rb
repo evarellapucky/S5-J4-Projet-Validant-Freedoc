@@ -20,5 +20,5 @@ end
 end
 
 30.times do 
-  appointments = Appointment.create(doctor: Doctor.all.sample, patient: Patient.all.sample, date: Faker::Date.between(from: '2024-02-10', to: '2024-05-25'))
+  appointments = Appointment.create(doctor: Doctor.all.sample, patient: Patient.all.sample, date: Faker::Time.between_dates(from: Date.today, to: Date.today + 365, period: :day))
 end
